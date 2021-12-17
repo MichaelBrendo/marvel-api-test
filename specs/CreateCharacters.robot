@@ -2,12 +2,12 @@
 Documentation       Suite de teste de cadastro de personagens
 
 Library     RequestsLibrary 
-Library     ${EXECDIR}/factories/Thanos.py
+Library     ${EXECDIR}/resources/factories/Thanos.py
 
 *Test Cases*
 Deve cadastrar um personagem
 
-    Account And Set headers     santos.michaelbrendo@gmail.com
+    Set Client Key  santos.michaelbrendo@gmail.com
 
     &{personagem}   Factory Thanos
     
@@ -19,7 +19,7 @@ Deve cadastrar um personagem
     Status Should Be    200
 
 *Keywords*
-Account And Set headers
+Set Client Key
     [Arguments]     ${email}
     &{usuario}      Create Dictionary   email=${email}
 
