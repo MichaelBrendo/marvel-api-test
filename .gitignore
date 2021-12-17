@@ -3,8 +3,8 @@
 *.html
 *.xml
 
-# OS generated files #
+# Byte-compiled #
 ######################
 *.__
 *.__
-*.__pycache__
+__pycache__/
