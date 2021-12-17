@@ -2,10 +2,10 @@
 
 ```bash
 # How to run the test
-robot CreateCharacters.robot
+robot -d ./logs/ specs/CreateCharacters.robot
 
 # Open report
-xdg-open report.html
+xdg-open logs/report.html
 ```
 
 ***
