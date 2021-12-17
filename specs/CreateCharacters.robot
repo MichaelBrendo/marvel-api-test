@@ -1,34 +1,25 @@
 *Settings*
-Documentation       Suite de teste de cadastro de personagens
+Documentation    Suite de teste de cadastro de personagens
 
-Library     RequestsLibrary 
+Resource    ${EXECDIR}/resources/base.robot
 Library     ${EXECDIR}/resources/factories/Thanos.py
 
 *Test Cases*
 Deve cadastrar um personagem
 
-    Set Client Key  santos.michaelbrendo@gmail.com
+    Set Client Key    santos.michaelbrendo@gmail.com
 
-    &{personagem}   Factory Thanos
-    
-    ${response}     POST
-    ...             http://marvel.qaninja.academy/characters
-    ...             json=${personagem}
-    ...             headers=${headers}
-    
-    Status Should Be    200
+    &{personagem}    Factory Thanos         
+    ${response}      POST New Characters    ${personagem}
 
-*Keywords*
-Set Client Key
-    [Arguments]     ${email}
-    &{usuario}      Create Dictionary   email=${email}
+    Status Should Be    200    ${response}
 
-    ${response}     POST
-    ...             http://marvel.qaninja.academy/accounts
-    ...             json=${usuario}
+Não deve cadastrar personagem com o mesmo nome
 
-    ${client_key}   Set Variable    ${response.json()}[client_key]
-    &{HEADERS}      Create Dictionary   client_key=${client_key}
+    ${personagem}          Factory Thanos
+    POST New Characters    ${personagem}
 
-    Set Suite Variable  ${HEADERS}
+    ${response}    POST New Characters    ${personagem}
 
+    Status Should Be    409                            ${response}
+    Should Be Equal     Character already exists :(    ${response.json()}[error]
