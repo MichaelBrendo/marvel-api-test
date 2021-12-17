@@ -1,14 +1,14 @@
 *Settings*
-Documentation       Ações da rota /characters
+Documentation    Ações da rota /characters
 
 *Keywords*
 POST New Characters
-    [Arguments]     ${payload}
+    [Arguments]    ${payload}
 
-    ${response}     POST
-    ...             ${BASE_URI}/characters
-    ...             json=${payload}
-    ...             headers=${HEADERS}
-    ...             expected_status=any
+    ${response}    POST
+    ...            ${API_URI}/characters
+    ...            json=${payload}
+    ...            headers=${HEADERS}
+    ...            expected_status=any
 
-    [Return]        ${response}
+    [Return]    ${response}

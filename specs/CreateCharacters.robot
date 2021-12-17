@@ -1,13 +1,13 @@
 *Settings*
-Documentation    Suite de teste de cadastro de personagens
+Documentation    Suite de teste cadastro de personagens
 
 Resource    ${EXECDIR}/resources/base.robot
-Library     ${EXECDIR}/resources/factories/Thanos.py
+Library     ${EXECDIR}/resources/factories/Guardians.py
+
+Suite Setup    Super Setup    santos.michaelbrendo@gmail.com
 
 *Test Cases*
 Deve cadastrar um personagem
-
-    Set Client Key    santos.michaelbrendo@gmail.com
 
     &{personagem}    Factory Thanos         
     ${response}      POST New Characters    ${personagem}
@@ -15,8 +15,9 @@ Deve cadastrar um personagem
     Status Should Be    200    ${response}
 
 Não deve cadastrar personagem com o mesmo nome
+    [Tags]    dup
 
-    ${personagem}          Factory Thanos
+    ${personagem}          Factory Deadpool
     POST New Characters    ${personagem}
 
     ${response}    POST New Characters    ${personagem}

@@ -10,3 +10,12 @@ def factory_thanos():
         "team": "Ordem Negra",
         "active": False        
     }
+
+def factory_deadpool():
+    return {
+        "name": "Wade Wilson",
+        "aliases": "Deadpool",
+        "age": 45,
+        "team": "X-Force",
+        "active": True        
+    }
