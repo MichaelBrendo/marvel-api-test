@@ -19,3 +19,12 @@ def factory_deadpool():
         "team": "X-Force",
         "active": True        
     }
+
+def factory_spider_man():
+    return {
+        "name": "Peter Parker",
+        "aliases": "Spider-Man",
+        "age": 35,
+        "team": "S.H.I.E.L.D",
+        "active": True
+    }

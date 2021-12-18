@@ -1,7 +1,10 @@
 *Settings*
 Documentation    initial test
 
-Library     RequestsLibrary
+Library    RequestsLibrary 
+Library    Helpers.py
+
+
 Resource    routes/Characters.robot
 
 *Variables*

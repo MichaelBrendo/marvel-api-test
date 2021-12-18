@@ -1,8 +1,8 @@
 *Settings*
-Documentation    Suite de teste cadastro de personagens
+Documentation    Suite de teste: cadastro de personagens
 
 Resource    ${EXECDIR}/resources/base.robot
-Library     ${EXECDIR}/resources/factories/Guardians.py
+Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
 
 Suite Setup    Super Setup    santos.michaelbrendo@gmail.com
 
