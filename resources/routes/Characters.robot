@@ -23,3 +23,13 @@ GET Character By Id
 
     [Return]    ${response}
 
+DELETE Character By Id
+    [Arguments]    ${characters_id}
+
+    ${response}    DELETE
+    ...            ${API_URI}/characters/${characters_id}
+    ...            headers=${HEADERS}
+    ...            expected_status=any
+
+    [Return]    ${response}
+

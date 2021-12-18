@@ -28,3 +28,12 @@ def factory_spider_man():
         "team": "S.H.I.E.L.D",
         "active": True
     }
+
+def factory_iron_man():
+    return {
+        "name": "Tony Stark",
+        "aliases": "Iron Man",
+        "age": 50,
+        "team": "S.H.I.E.L.D",
+        "active": True
+    }
