@@ -42,7 +42,7 @@ allure serve output/allure
 
 ***
 
-## Tecnology:
+## Technology:
 - [Python](https://www.python.org/)
     - [Bson](https://pypi.org/project/bson/)
     - [Faker](https://faker.readthedocs.io/en/master/)
