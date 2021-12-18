@@ -2,13 +2,13 @@
 
 ## How to run the test
 ```bash
-#All with report
+#All tests with report
 robot -d ./logs/ specs
 
-#Specific with report
+#Specific test with report
 robot -d ./logs/ specs/CreateCharacters.robot
 
-#All with Allure report
+#All tests with the allura report
 robot -d ./logs/ --listener allure_robotframework specs
 ```
 
@@ -27,6 +27,9 @@ xdg-open logs/report.html
 Node js and java required
 
 ```bash
+#Install allure
+pip install allure-robotframework
+
 #Install allure-cli
 npm install allure-commandline -g
 
