@@ -1,5 +1,5 @@
 *Settings*
-Documentation    Suite de teste: cadastro de personagens
+Documentation    Test Suite: Should register characters in Marvel API
 
 Resource    ${EXECDIR}/resources/base.robot
 Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
@@ -7,20 +7,20 @@ Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
 Suite Setup    Super Setup    santos.michaelbrendo@gmail.com
 
 *Test Cases*
-Deve cadastrar um personagem
+Should register characters
 
-    &{personagem}    Factory Thanos         
-    ${response}      POST New Characters    ${personagem}
+    &{character}    Factory Thanos         
+    ${response}     POST New Characters    ${character}
 
     Status Should Be    200    ${response}
 
-Não deve cadastrar personagem com o mesmo nome
+Should not register a character with the same name.
     [Tags]    dup
 
-    ${personagem}          Factory Deadpool
-    POST New Characters    ${personagem}
+    &{character}           Factory Deadpool
+    POST New Characters    ${character}
 
-    ${response}    POST New Characters    ${personagem}
+    ${response}    POST New Characters    ${character}
 
     Status Should Be    409                            ${response}
     Should Be Equal     Character already exists :(    ${response.json()}[error]

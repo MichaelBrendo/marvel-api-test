@@ -1,5 +1,5 @@
 *Settings*
-Documentation    initial test
+Documentation    Initial test
 
 Library    RequestsLibrary 
 Library    Helpers.py
@@ -19,11 +19,11 @@ Super Setup
 
 Set Client Key
     [Arguments]    ${email}
-    &{usuario}     Create Dictionary    email=${email}
+    &{user}     Create Dictionary    email=${email}
 
     ${response}    POST
     ...            ${API_URI}/accounts
-    ...            json=${usuario}
+    ...            json=${user}
 
     ${client_key}    Set Variable         ${response.json()}[client_key]
     &{HEADERS}       Create Dictionary    client_key=${client_key}

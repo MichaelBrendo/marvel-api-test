@@ -1,5 +1,5 @@
 *Settings*
-Documentation    Ações da rota /characters
+Documentation    Route actions /characters
 
 *Keywords*
 POST New Characters
