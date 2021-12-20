@@ -1,4 +1,4 @@
-# Marvel api test.
+# Marvel api test
 
 ## How to run the test
 ```bash
@@ -42,7 +42,7 @@ allure serve output/allure
 
 ***
 
-## Technology:
+## Technology
 - [Python](https://www.python.org/)
     - [Bson](https://pypi.org/project/bson/)
     - [Faker](https://faker.readthedocs.io/en/master/)
@@ -55,3 +55,6 @@ allure serve output/allure
     - Extensions:
         - Robot Framework Intelisense
         - Robot Framework Formatter
+
+## Credits
+Fernando Papito and Michael Brendo.
