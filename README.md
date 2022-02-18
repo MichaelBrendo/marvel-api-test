@@ -56,5 +56,5 @@ allure serve output/allure
         - Robot Framework Intelisense
         - Robot Framework Formatter
 
-## Credits
-Fernando Papito and Michael Brendo.
+
+Tks: Fernando Papito
