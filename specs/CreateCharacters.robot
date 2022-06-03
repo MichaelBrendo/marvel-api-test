@@ -4,7 +4,7 @@ Documentation    Test Suite: Should register characters in Marvel API
 Resource    ${EXECDIR}/resources/base.robot
 Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
 
-Suite Setup    Super Setup    santos.michaelbrendo@gmail.com
+Suite Setup    Super Setup    s.mb@gmail.com
 
 *Test Cases*
 Should register characters
