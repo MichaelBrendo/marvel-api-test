@@ -4,7 +4,7 @@ Documentation    Test Suite: Should deleting registered character
 Resource    ${EXECDIR}/resources/base.robot
 Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
 
-Suite Setup    Super Setup    santos.michaelbrendo@msn.com
+Suite Setup    Super Setup    s.mb@msn.com
 
 *Test Cases*
 Should remove a character by id
