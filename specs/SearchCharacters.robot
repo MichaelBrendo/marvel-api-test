@@ -4,7 +4,7 @@ Documentation    Test suite: Should look for a registered character
 Resource    ${EXECDIR}/resources/base.robot
 Library     ${EXECDIR}/resources/factories/MarvelCharacters.py
 
-Suite Setup    Super Setup    santos.michaelbrendo@live.com
+Suite Setup    Super Setup    s.mb@live.com
 
 *Test Cases*
 Should search a character by id
