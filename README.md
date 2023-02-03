@@ -1,6 +1,6 @@
 # Marvel api test
 
-## How to run the test
+### How to run the test
 ```bash
 #All tests with report
 robot -d ./logs/ specs
@@ -14,7 +14,7 @@ robot -d ./logs/ --listener allure_robotframework specs
 
 ***
 
-## Original report
+### Original report
 
 ```bash
 #Original report
@@ -23,7 +23,7 @@ xdg-open logs/report.html
 
 ***
 
-## Allure report
+### Allure report
 Node js and java required
 
 ```bash
@@ -39,10 +39,11 @@ allure --version
 #Start Allure reporting server
 allure serve output/allure
 ```
+git config --global user.name "Michael Santos"
 
 ***
 
-## Technology
+### Technology
 - [Python](https://www.python.org/)
     - [Bson](https://pypi.org/project/bson/)
     - [Faker](https://faker.readthedocs.io/en/master/)
